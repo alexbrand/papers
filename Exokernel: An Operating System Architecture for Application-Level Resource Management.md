@@ -32,3 +32,6 @@ from the shadow TLB.
 * Exokernel is capable of revoking resources when library OS is unresponsive to revoke request.
 * Breaks all existing secure bindings and informs library OS
 * Repossession vector includes list of resources being revoked
+
+## Aegis Data Structures
+* PE (Processor Environment): Contains entry points into Library OS for handling traps / discontinuities such as exception handlers, interrupt handlers, Protected Entry Context, and Addressing context. 
