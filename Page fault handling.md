@@ -36,7 +36,7 @@ field the fault.
 * Hypervisor passes the virtual address to the guest operating system.
 * Guest performs the mapping between virtual address and physical address.
 * Attempt to update the page table results in a trap, which is handled by the hypervisor.
-* The hypervisor updates the shadow page table to point VPN -> MPN.
+* The hypervisor updates the shadow page table to point Physical Page Number -> Machine Page Number.
 * Hypervisor installs translation into TLB and Hardware page table.
 
 ## Shared memory multiprocessor architecture
