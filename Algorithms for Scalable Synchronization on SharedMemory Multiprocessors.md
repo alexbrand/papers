@@ -145,9 +145,9 @@ func release(lock Lock, me QNode) {
 * Similar to counting barrier, initialize `count` to N
 * There is a shared `sense` variable initialized to `true`
 * Each processor also has a local `sense` variable initialized to `true`
-* When arriving at barrier, decrement `count` atomically, and reverse local `sense` variable 
+* When arriving at barrier, reverse your local `sense` variable and decrement `count` atomically
 * Spin until shared `sense` barrier equals local `sense` variable
-* When `count` equals one, reverse the shared `sense` barrier, and reset `count`
+* When `count` equals one, reverse the shared `sense` variable, and reset `count`
 ```
 count = N // number of processors
 shared sense = true
