@@ -12,6 +12,10 @@ and not due to the basic idea being unsound.
 * Kernel: part of the operating system that is common to all other software.
 * Micro-kernel: minimize the kernel (i.e. to implement outside the kernel whatever possible)
 
+## Micro-kernel concepts
+* Independence: Any subsystem S can be implemented in a way such that it cannot be affected or corrupted by another subsystem S'
+* Integrity: There must be a way for S1 and S2 to communicate using a channel that cannot be affected or eavesdropped by S'
+
 ## Micro-kernel primitives
 ### Address spaces
 Micro-kernel hides the hardware concept of address spaces. Microkernel provides three operations for
