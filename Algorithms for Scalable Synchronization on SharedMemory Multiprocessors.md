@@ -103,7 +103,7 @@ def release(lock Lock, my_place int) {
 * If the `last_requestor` is not null, the `last_requestor`'s `next` pointer is updated to point to `me`
 * The processor spins until `me.has_lock` is true
 * When releasing the lock, we set `next.has_lock` to true.
-* In the release case when `next` is null, the `compare_and_swap` operation is required to set the Locks `last_requestor` to null.
+* In the release case when `next` is null, the `compare_and_swap` operation is required to set the Lock's `last_requestor` to null.
 * If `compare_and_swap` returns false, this means that there's a new request for the lock, thus we must wait until `me.next` is non-null.
 * If `compare_and_swap` returns true, we return, effectively releasing the lock.
 ```
