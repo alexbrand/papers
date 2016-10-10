@@ -132,8 +132,6 @@ func release(lock Lock, me QNode) {
 ```
 
 # Barriers
-## Centralized barriers
-Centralized barriers employ a single shared memory location that processors update to indicate their arrival.
 ### Counting Barrier
 * Initialize `count` variable to P, where P is the number of processors
 * When arriving at barrier, decrement `count` atomically
