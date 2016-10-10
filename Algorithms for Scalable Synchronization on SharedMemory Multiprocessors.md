@@ -17,7 +17,7 @@ degradation.
 # Main argument
 The busy-wait contention can be eliminated by properly designed algorithms that ensure that processors 
 are spinning on local variables. The only requirement in terms of hardware is a set of fetch-and-phi operations,
-and the ability to for a processor to read some portion of the shared memory without using the interconnection network.
+and the ability for a processor to read some portion of the shared memory without using the interconnection network.
 
 # Spin Locks
 ## Test-and-set Lock
