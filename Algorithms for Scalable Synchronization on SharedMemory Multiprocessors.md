@@ -28,7 +28,7 @@ and the ability to for a processor to read some portion of the shared memory wit
 * To release the lock, all that is needed is to set the lock state to unlocked.
 * Test-and-test-and-set: On cache-coherent hardware, the spinning can be performed on a local variable. Once the lock is
 freed, the processor issues the test-and-set operation as an attempt to acquire the lock.
-* Test-and-set with exponential backoff: Empirical research shows that adding exponential reduces the contention
+* Test-and-set with exponential backoff: Empirical research shows that adding exponential delays reduces the contention
 in the interconnection network.
 ```
 locked = false
