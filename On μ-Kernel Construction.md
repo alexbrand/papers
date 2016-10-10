@@ -23,8 +23,7 @@ building address spaces on top of foundational address space.
 ### Threads and IPC
 * Thread: activity executing inside an address space. 
 * IPC (aka. cross-address-space communication) is handled by micro-kernel.
-* Interrupts are modeled as IPC messages. The hardware is regarded as a set of threads with special thread ids and empty 
-messages. 
+* Interrupts are modeled as IPC messages. The hardware is regarded as a set of threads with special thread ids and empty messages. 
 
 ### Unique identifiers
 * Micro-kernel must provide unique IDs for something: either threads, tasks or communication channels.
@@ -39,13 +38,12 @@ messages.
 * The main cost of address space switch is cost of flushing TLB
 * Not a problem with architectures that have address-space tagged TLBs, because flushing TLB is not necessary.
 * Exploit hardware features for avoding TLB flushes, such as segment registers in PowerPC and x86.
-* Expensive context-switching in some existing micro-kernels is due to bad implementation, and not inherent problems with 
-concept of micro-kernel.
+* Protection domains can be implemented using segment registers instead of actual address space switches. For this reason, there is no need to flush the TLB.
+* Expensive context-switching in some existing micro-kernels is due to bad implementation, and not inherent problems with concept of micro-kernel.
 
 ### Thread switches and IPC
 * Measured various OSs and showed that micro-kernels are at least 2 times faster.
 * Proved by construction that a 10 micro-second RPC call is achievable.
 
 ## Memory Effects
-* Properly constructed micro-kernel automatically avoid memory system degradation because working set
-of micro-kernel is small.
+* Properly constructed micro-kernel automatically avoid memory system degradation because working set of micro-kernel is small.
