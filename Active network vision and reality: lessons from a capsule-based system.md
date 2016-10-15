@@ -40,3 +40,5 @@ and c) performing routing decisions
 to obtain the custom forwarding code
 * Code verification is performed via MD5 fingerprint, which is put inside the capsule
 * When code is not in the active router's cache, a request is made to the previous router using the previous address field of the capsule.
+* Code runs inside sandbox, which prevents untrusted code from corrupting the node
+* Deployment of active routers occurrs incrementaly. Begin with end-systems, moving towards routers inside ISPs.
